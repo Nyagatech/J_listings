@@ -1,4 +1,8 @@
+<div class=" m-4"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square bg-light m-2" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+</svg> <span class="fw-bold">Recent Jobs</span></div>
 <section class="job-card-section">
+
     <div class="container bg-black m-4 p-4 shadow-lg rounded-lg bg-opacity-50" style="max-width: 95%;">
         <div class="row align-items-center">
             <div class="col-12 col-sm-4 text-center mb-3 mb-sm-0">

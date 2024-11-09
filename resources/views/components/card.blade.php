@@ -23,7 +23,7 @@
     /* Hover Effects for Tags */
     .hover\:bg-white:hover {
         background-color: white !important;
-        color: #000000 !important; /* Change text color to match primary theme */
+        color: #000000 !important;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
 

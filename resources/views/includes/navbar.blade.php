@@ -17,3 +17,16 @@
 </svg></p><span>Post a job</span></div>
  </nav>
  <hr>
+
+ <style>
+  a:hover{
+    padding: 10px;
+    text-decoration: underline;
+    transition: 0.5s ease;
+  }
+  p:hover{
+    padding: 10px;
+    transition: 0.5s ease;
+  }
+
+ </style>
