@@ -1,0 +1,34 @@
+models:
+  Job:
+    Employer_id: id Employer
+    title: string
+    description: text
+    salary: string
+    job_type: string
+    location: string
+    company: string
+    url: string
+    relationships:
+      belongsTo: Employer
+
+  Employer:
+    id: increments
+    user_id: id User.id
+    name: string
+    email: string
+    logo: string
+    timestamps: timestamps
+    relationships:
+      belongsTo: User
+      hasMany: Job
+
+  User:
+    id: increments
+    name: string
+    email: string
+    email_verified_at: timestamp:nullable
+    password: string
+    remember_token: string:nullable
+    timestamps: timestamps
+    relationships:
+      hasMany: Employer

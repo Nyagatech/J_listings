@@ -1,0 +1,14 @@
+created:
+    - database/factories/JobFactory.php
+    - database/factories/EmployerFactory.php
+    - database/factories/UserFactory.php
+    - database/migrations/2024_11_10_154538_create_jobs_table.php
+    - database/migrations/2024_11_10_154539_create_employers_table.php
+    - database/migrations/2024_11_10_154540_create_users_table.php
+    - app/Models/Job.php
+    - app/Models/Employer.php
+    - app/Models/User.php
+models:
+    Job: { Employer_id: 'id Employer', title: string, description: text, salary: string, job_type: string, location: string, company: string, url: string, relationships: { belongsTo: Employer } }
+    Employer: { id: increments, user_id: 'id User.id', name: string, email: string, logo: string, timestamps: timestamps, relationships: { belongsTo: User, hasMany: Job } }
+    User: { id: increments, name: string, email: string, email_verified_at: 'timestamp:nullable', password: string, remember_token: 'string:nullable', timestamps: timestamps, relationships: { hasMany: Employer } }
