@@ -2,9 +2,9 @@ created:
     - database/factories/JobFactory.php
     - database/factories/EmployerFactory.php
     - database/factories/UserFactory.php
-    - database/migrations/2024_11_10_154538_create_jobs_table.php
-    - database/migrations/2024_11_10_154539_create_employers_table.php
-    - database/migrations/2024_11_10_154540_create_users_table.php
+    - database/migrations/2024_11_12_065148_create_jobs_table.php
+    - database/migrations/2024_11_12_065149_create_employers_table.php
+    - database/migrations/2024_11_12_065150_create_users_table.php
     - app/Models/Job.php
     - app/Models/Employer.php
     - app/Models/User.php

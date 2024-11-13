@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job;
-use App\Http\Requests\StoreJobRequest;
-use App\Http\Requests\UpdateJobRequest;
+use App\Models\Job; // Model for the Job resource
+use App\Http\Requests\StoreJobRequest; // Request validation for storing a job
+use App\Http\Requests\UpdateJobRequest; // Request validation for updating a job
 
 class JobController extends Controller
 {
@@ -13,7 +13,8 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = Job::all();
+        return view('jobs.index', ['jobs' => Job::all()]); // Pass all jobs to the index view
     }
 
     /**
@@ -21,7 +22,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        //
+        return view('jobs.create'); // Return the view for creating a new job
     }
 
     /**
@@ -29,7 +30,8 @@ class JobController extends Controller
      */
     public function store(StoreJobRequest $request)
     {
-        //
+        Job::create($request->validated()); // Validate and create the job record
+        return redirect()->route('jobs.index')->with('success', 'Job created successfully.'); // Redirect to index with success message
     }
 
     /**
@@ -37,7 +39,7 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
-        //
+        return view('jobs.show', compact('job')); // Pass the specific job to the show view
     }
 
     /**
@@ -45,7 +47,7 @@ class JobController extends Controller
      */
     public function edit(Job $job)
     {
-        //
+        return view('jobs.edit', compact('job')); // Pass the specific job to the edit view
     }
 
     /**
@@ -53,7 +55,8 @@ class JobController extends Controller
      */
     public function update(UpdateJobRequest $request, Job $job)
     {
-        //
+        $job->update($request->validated()); // Validate and update the job record
+        return redirect()->route('jobs.index')->with('success', 'Job updated successfully.'); // Redirect to index with success message
     }
 
     /**
@@ -61,6 +64,7 @@ class JobController extends Controller
      */
     public function destroy(Job $job)
     {
-        //
+        $job->delete(); // Delete the job record
+        return redirect()->route('jobs.index')->with('success', 'Job deleted successfully.'); // Redirect to index with success message
     }
 }

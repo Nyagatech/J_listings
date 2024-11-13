@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,14 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Job extends Model
 {
     use HasFactory;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'Employer_id',
+  protected $fillable = [
+   'Employer_id',
         'title',
         'description',
         'salary',
@@ -24,17 +18,11 @@ class Job extends Model
         'location',
         'company',
         'url',
-        'employer_id',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+        'employer_id',   
+  ];
+    
     protected $casts = [
         'id' => 'integer',
-        'Employer_id' => 'integer',
         'employer_id' => 'integer',
     ];
 
@@ -43,3 +31,4 @@ class Job extends Model
         return $this->belongsTo(Employer::class);
     }
 }
+
